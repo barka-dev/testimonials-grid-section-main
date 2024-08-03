@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/barka-dev/testimonials-grid-section-main.git](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://barka-dev.github.io/testimonials-grid-section-main/](https://your-live-site-url.com)
 
 ## My process
 

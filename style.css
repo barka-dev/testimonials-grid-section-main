@@ -14,9 +14,145 @@
     --family-font: 'Barlow Semi Condensed';
     --weights-level-1: 500;
     --weights-level-2: 600;
-    
-/* Note for text colors:
+}
 
-1. "Verified Graduate" has the same color as the person's name with 50% opacity
-2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: var(--family-font);
+    font-size: var(--font-size);
+    background-color: var(--light-grayish-blue); 
+}
+
+
+main>section{
+    width: 85%;
+    max-width:80em;
+    margin: 4em auto;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:1.5em;
+
+}
+
+article{
+    grid-column: 1 / 13;
+    border-radius: .5em;
+    padding:2em;
+    display:flex;
+    flex-direction:column;
+    gap:1em; 
+    box-shadow: 24px 18px 66px -30px rgba(72,85,106,0.36);
+-webkit-box-shadow: 24px 18px 66px -30px rgba(72,85,106,0.36);
+-moz-box-shadow: 24px 18px 66px -30px rgba(72,85,106,0.36);
+}
+
+article > section {
+    display:flex;
+    gap:1em;
+}
+
+article section img{
+    border-radius:50%;
+    width: 2.5em;
+    height: 2.5em;
+    border:2px solid var(--light-gray);
+}
+
+section article:nth-child(1){
+    background-color: var(--moderate-violet);
+    color: var(--white);
+    background-image:url('images/bg-pattern-quotation.svg');
+    background-repeat:no-repeat;
+    background-position: calc(100% - 1.5em) 0;
+    background-size: 7.2em 7.2em;
+}
+
+section article:nth-child(2){
+    background-color: var(--very-dark-grayish-blue);
+    color: var(--white);
+}
+
+section article:nth-child(3), section article:nth-child(5){
+    background-color: var(--white);
+    color: var(--very-dark-blackish-blue);
+}
+
+section article:nth-child(4){
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--white);
+}
+
+section article section p{
+    opacity: 0.5;
+}
+
+section article > p{
+    opacity: 0.7;
+}
+
+h1{
+    font-weight: var(--weights-level-2);
+}
+
+strong{
+    font-weight: var(--weights-level-1);
+}
+
+@media screen and (min-width:750px){
+    :root{
+        --font-size:10px;
+    }
+
+    section article:nth-child(1){
+        background-position: calc(100% - 5em) 0;
+    }
+    main{
+        display:flex;
+        height:100vh;
+        align-items:center;
+        justify-content:center;
+    }
+
+    main>section{
+        margin: 0;
+    }
+   
+    article:nth-of-type(1){
+        grid-column: 1 / 7;
+        grid-row:1;
+    }
+
+    article:nth-of-type(2){
+        grid-column: 7 / 10;
+        grid-row:1;
+    }
+
+    article:nth-of-type(3){
+        grid-column: 1 / 4;
+        grid-row:2;
+    }
+
+    article:nth-of-type(4){
+        grid-column: 4 / 10;
+        grid-row:2;
+    }
+
+    article:nth-of-type(5){
+        grid-column: 10 / 13;
+        grid-row:span 2;
+    }
+
+}
+
+@media screen and (min-width:900px){
+    :root{
+        --font-size:13px;
+    }  
+
+    
 }
